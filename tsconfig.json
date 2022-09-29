@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "outDir": "./build/",
+    "rootDir": "./src/",
+    "strict": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "*": ["node_modules", "public"]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/**/*.ts"]
+}

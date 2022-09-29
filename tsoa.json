@@ -1,0 +1,10 @@
+{
+  "entryFile": "src/index.ts",
+  "controllerPathGlobs": ["src/services/**/*service.ts"],
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "spec": {
+    "outputDirectory": "public/swagger",
+    "specVersion": 3
+  },
+  "ignore": ["**/node_modules/**"]
+}

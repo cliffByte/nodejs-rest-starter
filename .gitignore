@@ -1,0 +1,9 @@
+node_modules
+log
+public
+.env
+yarn.lock
+.vscode
+log
+todo.txt
+build/
