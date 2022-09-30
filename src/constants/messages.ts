@@ -12,6 +12,7 @@ const messages = {
   dataInserted: "Data Inserted Successfully",
   dataDeleted: "Data Deleted Successfully",
   adminCreated: "Admin Created Successfully",
+  userCreated:"User Created Successfully",
   passwordStrength:
     "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character",
   invalidAuth: "Invalid email or password",
@@ -22,6 +23,18 @@ const messages = {
   invalidProjectId: "Invalid Project",
   actionCompleted: "Action completed successfully",
   contactNumberExist: "Contact Number Already Exist",
+
 };
 
+
 export default messages;
+
+
+
+enum MessageTitleEnum {
+  SERVER_ERROR="serverError"
+}
+const wateer = {
+  MessageTitleEnum
+
+}

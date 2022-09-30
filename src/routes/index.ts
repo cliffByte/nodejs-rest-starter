@@ -1,19 +1,15 @@
 import { Router } from "express";
 import messages from "../constants/messages";
+import authRouter from "./auth.route";
 
 const router = Router();
 const routes = [
   {
     path: "/auth",
-    route: "",
+    route: authRouter
   },
-  {},
 ];
 
-// *Instantiate all the routes
-routes.forEach((route) => {
-  router.use(route.path, route.route);
-});
 
 // *Route to ensure that server is currently running
 router.get("/", (req, res) => {
@@ -23,5 +19,13 @@ router.get("/", (req, res) => {
     data: [],
   });
 });
+
+
+// *Instantiate all the routes
+routes.forEach((route) => {
+  router.use(route.path, route.route);
+});
+
+
 
 export default router;

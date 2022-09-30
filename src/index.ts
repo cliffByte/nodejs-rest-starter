@@ -6,7 +6,7 @@ import Print from "./utils/Print";
 
 dataSource
   .initialize()
-  .then((_) => {
+  .then(() => {
     app.listen(env.PORT, () => {
       Print.info(`Server is running on port ${env.PORT}`);
     });

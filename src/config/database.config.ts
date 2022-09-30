@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import env from "./env";
 
-export default new DataSource({
+ const AppDataSource =new DataSource({
   type: "mysql",
   host: env.DATABASE_HOST,
   port: env.DATABASE_PORT,
@@ -15,3 +15,5 @@ export default new DataSource({
   subscribers: [],
   migrations: [],
 });
+
+export default AppDataSource;
