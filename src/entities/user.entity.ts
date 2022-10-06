@@ -12,9 +12,11 @@ class User extends CommonEntity {
 
 
      @Column({
-        name:"middle_name"
+        name:"middle_name",
+        nullable:true
+
     })
-    middleName!:string;
+    middleName?:string;
 
     
     @Column({

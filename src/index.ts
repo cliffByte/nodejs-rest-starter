@@ -9,6 +9,7 @@ dataSource
   .then(() => {
     app.listen(env.PORT, () => {
       Print.info(`Server is running on port ${env.PORT}`);
+      Print.info("DataBase Connected Successfully ")
     });
   })
   .catch((err) => {

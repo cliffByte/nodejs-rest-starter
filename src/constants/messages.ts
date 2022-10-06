@@ -28,13 +28,3 @@ const messages = {
 
 
 export default messages;
-
-
-
-enum MessageTitleEnum {
-  SERVER_ERROR="serverError"
-}
-const wateer = {
-  MessageTitleEnum
-
-}

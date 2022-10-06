@@ -21,7 +21,7 @@ class env {
 
   
   // *Other Configurations
-  static DEBUG_MODE = process.env.DEBUG_MODE;
+  static DEBUG_MODE = Boolean(process.env.DEBUG_MODE);
   static JWT_SECRET = process.env.JWT_SECRET!;
   static TOKEN_EXPIRES_IN = process.env.TOKEN_EXPIRES_IN!;
 

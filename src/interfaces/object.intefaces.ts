@@ -1,4 +1,4 @@
 
-export interface IAnyObject {
-    [key:string]:any
+export interface IAnyObject<T> {
+    [key:string]:T
 }

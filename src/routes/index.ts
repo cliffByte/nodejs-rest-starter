@@ -11,6 +11,8 @@ const routes = [
 ];
 
 
+
+
 // *Route to ensure that server is currently running
 router.get("/", (req, res) => {
   res.send({
@@ -23,7 +25,11 @@ router.get("/", (req, res) => {
 
 // *Instantiate all the routes
 routes.forEach((route) => {
-  router.use(route.path, route.route);
+  console.log(
+    "wow"
+  );
+  
+  router.use("/auth", route.route());
 });
 
 
