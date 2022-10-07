@@ -6,9 +6,10 @@ import Print from "./utils/Print";
 
 dataSource
   .initialize()
-  .then((_) => {
-    app.listen(env.PORT, () => {
+  .then(async () => {
+    app.listen(env.PORT, async () => {
       Print.info(`Server is running on port ${env.PORT}`);
+      Print.info("DataBase Connected Successfully ");
     });
   })
   .catch((err) => {

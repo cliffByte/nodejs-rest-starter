@@ -21,7 +21,7 @@ const errorHandler = (
     success: false,
     message: messages["serverError"],
     data: [],
-    ...(env.DEBUG_MODE === "true" && { originalError: error.message }),
+    ...(env.DEBUG_MODE == true && { originalError: error.message }),
   };
   if (error.isCustom) {
     statusCode = error.statusCode;
