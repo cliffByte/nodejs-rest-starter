@@ -6,9 +6,9 @@
   "author": "Saroj Dahal <isarojdahal@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "tsoa":"tsoa spec",
+    "tsoa": "tsoa spec",
     "start": "ts-node ./src/index.ts",
-    "prestart:dev":"npm run tsoa",
+    "prestart:dev": "npm run tsoa",
     "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "rimraf ./build && tsc "
   },
@@ -38,6 +38,7 @@
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "express-fileupload": "^1.4.0",
+    "ioredis": "^5.2.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",

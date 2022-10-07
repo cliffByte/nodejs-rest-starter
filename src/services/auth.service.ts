@@ -30,12 +30,13 @@ class AuthService {
     if (isExists) {
       throw HttpException.badRequest(messages["emailAlreadyExists"]);
     }
+    const hashedPassword= await BcryptService.hash(password)
     const user = this.userRepository.create({
       email,
       firstName,
       lastName,
       middleName,
-      password,
+      password:hashedPassword
     });
     return await this.userRepository.save(user);
   }
@@ -53,11 +54,12 @@ class AuthService {
       throw HttpException.badRequest(messages["invalidAuth"]);
     }
 
+    
     const isValidPassword = await BcryptService.compare(
       password,
       user.password
-    );
-    if (isValidPassword) {
+      );
+      if (!isValidPassword) {
       throw HttpException.badRequest(messages["invalidAuth"]);
     }
     return user;

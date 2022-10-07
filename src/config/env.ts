@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-class env {
+class Env {
   static NODE_ENV = process.env.NODE_ENVIRONMENT;
   static PORT = +process.env.PORT!;
 
@@ -18,6 +18,7 @@ class env {
   // *Redis Configurations
   static REDIS_PORT = process.env.REDIS_PORT!;
   static REDIS_HOST =process.env.REDIS_HOST!;
+  static REDIS_PASSWORD =process.env.REDIS_PASSWORD!;
 
   
   // *Other Configurations
@@ -27,4 +28,4 @@ class env {
 
 }
 
-export default env;
+export default Env;

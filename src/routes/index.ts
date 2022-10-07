@@ -22,13 +22,8 @@ router.get("/", (req, res) => {
   });
 });
 
-
 // *Instantiate all the routes
 routes.forEach((route) => {
-  console.log(
-    "wow"
-  );
-  
   router.use("/auth", route.route());
 });
 

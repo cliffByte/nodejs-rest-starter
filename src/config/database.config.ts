@@ -10,7 +10,7 @@ import env from "./env";
   password: env.DATABASE_PASSWORD,
   database: env.DATABASE_NAME,
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: [`${__dirname}/../entities/**/*{.ts,.js}`],
   subscribers: [],
   migrations: [],
