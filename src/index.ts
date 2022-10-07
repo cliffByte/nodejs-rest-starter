@@ -8,7 +8,6 @@ dataSource
   .initialize()
   .then(async () => {
     app.listen(env.PORT, async () => {
-      Print.info("Redis Connected Successfully");
       Print.info(`Server is running on port ${env.PORT}`);
       Print.info("DataBase Connected Successfully ");
     });
